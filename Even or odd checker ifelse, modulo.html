@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+    <title>Even or Odd Checker</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 350px;
+            width: 100%;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        input[type="number"] {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input[type="number"]:focus {
+            border-color: #4ade80;
+        }
+
+        button {
+            background-color: #4ade80;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 87%;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #22c55e;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #4b5563;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container">
+        <h2>Even or Odd Checker</h2>
+        <input type="number" id="numberInput" placeholder="Enter a number">
+        <button onclick="checkEvenOrOdd()">Check Number</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function checkEvenOrOdd() {
+        
+            const inputElement = document.getElementById('numberInput');
+            const resultElement = document.getElementById('result');
+            const value = inputElement.value;
+
+            if (value === "") {
+                resultElement.textContent = "Please enter a valid number.";
+                resultElement.style.color = "#ef4444"; // Red color for error
+                return;
+            }
+
+            const number = parseInt(value);
+
+            if (number % 2 === 0) {
+                
+                resultElement.textContent = `${number} is an EVEN number.`;
+                resultElement.style.color = "#22c55e"; // Green color
+            } else {
+                resultElement.textContent = `${number} is an ODD number.`;
+                resultElement.style.color = "#3b82f6"; // Blue color
+            }
+        }
+    </script>
+
+</body>
+</html>
