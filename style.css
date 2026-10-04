@@ -1,52 +1,98 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #74b9ff, #a29bfe);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-}
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-}
-header h1 {
-    margin-bottom: 20px;
-    color: #333;
-}
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
+    min-height: 100vh;
 }
 
-input[type="date"] {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 8px;
+.converter-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     width: 100%;
-    box-sizing: border-box;
+    max-width: 420px;
+    text-align: center;
+}
+
+h2 {
+    color: #2d3436;
     margin-bottom: 20px;
 }
+
+.input-group, .dropdown-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #636e72;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #dfe6e9;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #6c5ce7;
+}
+
+.dropdown-group {
+    display: flex;
+    gap: 15px;
+}
+
+.dropdown-group div {
+    flex: 1;
+}
+
 button {
-    background-color: #007bff;
-    border: none;
+    width: 100%;
+    padding: 14px;
+    background-color: #6c5ce7;
     color: white;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #0056b3;
-}
-#currentAge {
-    margin-top: 20px;
-    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
     font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #5b4bc4;
+}
+
+.result-box {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #f1f2f6;
+    border-radius: 8px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #2d3436;
+    word-break: break-all;
+}
+
+#outputUnit {
+    color: #6c5ce7;
 }
